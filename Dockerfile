@@ -11,5 +11,6 @@ COPY requirements.txt /usr/src/app/
 RUN pip install -r requirements.txt
 
 COPY . /usr/src/app
+COPY /usr/src/app/config.default.ini /usr/src/app/config.ini
 
 CMD ["python", "bridge.py"]
