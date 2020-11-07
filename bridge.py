@@ -293,7 +293,7 @@ try:
     ### Parse config ###
     try:
         Config = ConfigParser.SafeConfigParser()
-        if Config.read("config.ini"):
+        if Config.read("/opt/cec-mqtt-bridge/config.ini"):
 
             # Load all sections and overwrite default configuration
             for section in Config.sections():
