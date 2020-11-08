@@ -365,7 +365,7 @@ try:
     while True:
         if int(config['cec']['enabled']) == 1:
             cec_refresh()
-        time.sleep(config['cec']['refresh'])
+        time.sleep(int(config['cec']['refresh']))
 
 except KeyboardInterrupt:
     cleanup()
