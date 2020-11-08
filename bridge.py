@@ -23,6 +23,7 @@ config = {
     'cec': {
         'enabled': 0,
         'id': 1,
+        'refresh': 30,
         'port': 'RPI',
         'devices': '0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15',
     },
@@ -364,7 +365,7 @@ try:
     while True:
         if int(config['cec']['enabled']) == 1:
             cec_refresh()
-        time.sleep(10)
+        time.sleep(config['cec']['refresh'])
 
 except KeyboardInterrupt:
     cleanup()
